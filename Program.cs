@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using Microsoft.VisualBasic;
 
 Console.WriteLine("Банковский счет");
 
@@ -142,5 +143,23 @@ int chislo = int.Parse(Console.ReadLine());
 
 bool isEven = chislo % 2 == 0;
 Console.WriteLine($"число {chislo} четное {isEven}");
+
+
+Console.WriteLine();
+Console.WriteLine("Инкремент в выражении");
+
+// Постфикс, сначала отдает старое значение и потом увеличивает 
+int a = 10;
+int result1 = a++ + a; // выдаст 21
+Console.WriteLine($"{result1}"); // Док-во
+// Префикс, сначала увеличивает и потом выводит новое значение
+int b = 5;
+int result2 = ++b + b; // выдаст 12
+Console.WriteLine($"{result2}"); // Док-во
+// Практическая ловушка 
+int c = 0;
+Console.WriteLine($"{++c}"); // Прибавляет 1 и сохраняет 
+Console.WriteLine($"{++c}"); // Прибавляет 1 к предыдущему действию и сохраняет 
+Console.WriteLine($"{c}"); 
 
 
