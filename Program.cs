@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Банковский счет");
+﻿using System.Globalization;
+
+Console.WriteLine("Банковский счет");
 
 double balance = 1000;
 Console.WriteLine($"Начальный баланс: {balance}");
@@ -130,3 +132,15 @@ Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
 Console.WriteLine($"Льгота: {hasBenefit}");
 Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
 Console.WriteLine($"Итоговый балл: {totalScore}");
+
+
+Console.WriteLine();
+Console.WriteLine("Чётное или нечётное, без f");
+
+Console.Write("Введите целое число: ");
+int chislo = int.Parse(Console.ReadLine());
+
+bool isEven = chislo % 2 == 0;
+Console.WriteLine($"число {chislo} четное {isEven}");
+
+
