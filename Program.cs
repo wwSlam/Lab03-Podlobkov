@@ -160,6 +160,29 @@ Console.WriteLine($"{result2}"); // Док-во
 int c = 0;
 Console.WriteLine($"{++c}"); // Прибавляет 1 и сохраняет 
 Console.WriteLine($"{++c}"); // Прибавляет 1 к предыдущему действию и сохраняет 
-Console.WriteLine($"{c}"); 
+Console.WriteLine($"{c}");
+
+
+Console.WriteLine();
+Console.WriteLine("Калькулятор скидки с несколькими условиями");
+
+Console.Write("Какая сумма покупки: ");
+double summ = double.Parse(Console.ReadLine());
+
+Console.Write("Есть ли карта постоянного клиента(1 -- да, 0 -- нет ): ");
+int karta = int.Parse(Console.ReadLine());
+bool kart = (karta == 1);
+
+Console.WriteLine();
+Console.WriteLine("Введите количество товаров: ");
+int tovar = int.Parse(Console.ReadLine());
+
+bool eligibleForDiscount = (summ >= 3000 && tovar >= 3) || kart;
+
+Console.WriteLine($"цена:               {summ}");
+Console.WriteLine($"Есть ли карта:      {kart}");
+Console.WriteLine($"Количество товаров: {tovar}");
+Console.WriteLine($"Будет скидка:       {eligibleForDiscount}");
+
 
 
